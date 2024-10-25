@@ -3,19 +3,19 @@ namespace jdiazExamenA.Views;
 public partial class Registro : ContentPage
 {
     public string usuarioSesion = "";
+    double MaxMontoInicial = 1500;
+    double pagoTotalConIva = 0;
     public Registro(string _usuarioSesion)
 	{
         usuarioSesion = _usuarioSesion;
-        //lblUsuarioConectado.Text = $"Usuario Conectado: {_usuarioSesion}";
         InitializeComponent();
+        lblUsuarioConectado.Text = $"Usuario Conectado: {_usuarioSesion}";
 	}
 
     private void txtMontoInicial_TextChanged(object sender, TextChangedEventArgs e)
     {
         lblUsuarioConectado.Text = $"Usuario Conectado: {usuarioSesion}";
-        double MaxMontoInicial = 1500;
-        double pagoTotalConIva = 0;
-        double pagoTotal = 0;
+        
         // Validar si el monto inicial es válido
         if (double.TryParse(txtMontoInicial.Text, out double montoInicial))
         {
@@ -83,7 +83,7 @@ public partial class Registro : ContentPage
         nombre = txtNombre.Text;
         apellido = txtApellido.Text;
 
-        Navigation.PushAsync(new Resumen(usuarioSesion,nombrePais, nombreCiudad, nombre, apellido, edad));
+        Navigation.PushAsync(new Resumen(usuarioSesion,nombrePais, nombreCiudad, nombre, apellido, edad, dFechas.Date.ToString("dd/MM/yyyy"), Convert.ToDouble(txtMontoInicial.Text), Convert.ToDouble(txtPagoMensual.Text), Convert.ToDouble(pagoTotalConIva)));
 
 
     }

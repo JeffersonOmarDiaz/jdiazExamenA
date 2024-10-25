@@ -4,10 +4,18 @@
              x:Class="jdiazExamenA.Views.Resumen"
              Title="Resumen">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <!-- Mostrar usuario conectado -->
+        <Label x:Name="lblUsuarioConectado"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand" />
+
+        <!-- Título de la ventana -->
+        <Label Text="RESUMEN"
+               FontSize="22"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand"
+               TextColor="Blue" />
 
         <Grid>
             <Grid.RowDefinitions>
@@ -27,32 +35,32 @@
             </Grid.ColumnDefinitions>
             
             
-            <Label Text="Nombre:" Grid.Row="2" Grid.Column="0"/>
-            <Label x:Name="lblNombre" Grid.Row="2" Grid.Column="1"/>
+            <Label Text="Nombre:" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="lblNombre" Grid.Row="0" Grid.Column="1"/>
 
-            <Label Text="Apellido:" Grid.Row="3" Grid.Column="0"/>
-            <Label x:Name="lblApellido" Grid.Row="3" Grid.Column="1"/>
+            <Label Text="Apellido:" Grid.Row="1" Grid.Column="0"/>
+            <Label x:Name="lblApellido" Grid.Row="1" Grid.Column="1"/>
 
-            <Label Text="Edad:" Grid.Row="4" Grid.Column="0"/>
-            <Label x:Name="lblEdad" Grid.Row="4" Grid.Column="1"/>
+            <Label Text="Edad:" Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="lblEdad" Grid.Row="2" Grid.Column="1"/>
 
-            <Label Text="Fecha:" Grid.Row="5" Grid.Column="0"/>
-            <Label x:Name="lblFecha" Grid.Row="5" Grid.Column="1"/>
+            <Label Text="Fecha:" Grid.Row="3" Grid.Column="0"/>
+            <Label x:Name="lblFecha" Grid.Row="3" Grid.Column="1"/>
 
-            <Label Text="Ciudad:" Grid.Row="6" Grid.Column="0"/>
-            <Label x:Name="lblCiudad" Grid.Row="6" Grid.Column="1"/>
+            <Label Text="Ciudad:" Grid.Row="4" Grid.Column="0"/>
+            <Label x:Name="lblCiudad" Grid.Row="4" Grid.Column="1"/>
 
-            <Label Text="País:" Grid.Row="7" Grid.Column="0"/>
-            <Label x:Name="lblPais" Grid.Row="7" Grid.Column="1"/>
+            <Label Text="País:" Grid.Row="5" Grid.Column="0"/>
+            <Label x:Name="lblPais" Grid.Row="5" Grid.Column="1"/>
 
-            <Label Text="Monto Inicial:" Grid.Row="8" Grid.Column="0"/>
-            <Label x:Name="lblMontoInicial" Grid.Row="8" Grid.Column="1"/>
+            <Label Text="Monto Inicial:" Grid.Row="6" Grid.Column="0"/>
+            <Label x:Name="lblMontoInicial" Grid.Row="6" Grid.Column="1"/>
 
-            <Label Text="Pago Mensual:" Grid.Row="9" Grid.Column="0"/>
-            <Label x:Name="lblPagoMensual" Grid.Row="9" Grid.Column="1"/>
+            <Label Text="Pago Mensual:" Grid.Row="7" Grid.Column="0"/>
+            <Label x:Name="lblPagoMensual" Grid.Row="7" Grid.Column="1"/>
 
-            <Label Text="Pago Total:" Grid.Row="10" Grid.Column="0"/>
-            <Label x:Name="lblPagoTotal" Grid.Row="10" Grid.Column="1"/>
+            <Label Text="Pago Total:" Grid.Row="8" Grid.Column="0"/>
+            <Label x:Name="lblPagoTotal" Grid.Row="8" Grid.Column="1"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
